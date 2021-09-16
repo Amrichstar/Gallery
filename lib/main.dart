@@ -167,6 +167,114 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(16, 10, 16, 0),
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgwCY3w98Niqog2DCXKFkrnjPotCLWwBOmlA&usqp=CAU'),
+                    ),
+                    title: Text(
+                      'Edith',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
+                    ),
+                    subtitle: Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          size: 14,
+                          color: Colors.blue,
+                        ),
+                        Text('Madina, Ghana')
+                      ],
+                    ),
+                  ),
+                  Image.network(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2TO5I6Dhbn73jfsh9RNFuvafzjnGM5h8xag&usqp=CAU',
+                    height: 218,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Material(
+                            color: Colors.grey.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(35),
+                            child: Padding(
+                              padding: EdgeInsets.all(16),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.red,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    '275',
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          FlutterImageStack(
+                            imageList: _images,
+                            showTotalCount: false,
+                            totalCount: 4,
+                            itemRadius: 35,
+                            // Radius of each images
+                            itemCount:
+                                4, // Maximum number of images to be shown in stack
+                            itemBorderWidth: 2,
+                            // Border width around the images
+                          ),
+                        ],
+                      ),
+                      Material(
+                        color: Colors.grey.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(35),
+                        child: Padding(
+                          padding: EdgeInsets.all(16),
+                          child: Row(
+                            children: [
+                              Icon(
+                                CupertinoIcons.chat_bubble_fill,
+                                color: Colors.grey,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                '87',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+
           ],
         ),
       ),
